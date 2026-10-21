@@ -25,4 +25,4 @@ npm run serve    # http://127.0.0.1:4173
 
 ## License
 
-The site's code is released under the [MIT License](LICENSE). The Sepiabox name and logo are not covered by it; see [sepiabox-brand](https://github.com/sepiabox/sepiabox-brand).
+The site's code is released under the [MIT License](LICENSE). The Sepiabox name and logo, including `assets/symbol.svg`, `assets/favicon.svg` and `assets/symbol-small-light.svg`, are not covered by it: all rights reserved (from [sepiabox-brand](https://github.com/sepiabox/sepiabox-brand)).

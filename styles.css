@@ -116,6 +116,11 @@ h3 {
   text-decoration: none;
 }
 
+/* The logo keeps its colors: the links' hover would turn "box" blue. */
+.brand:hover {
+  color: var(--developer);
+}
+
 /* The wordmark (sepiabox-brand): lowercase, ExtraBold, tight, "sepia" in the brand color and "box" in developer. */
 .wordmark {
   font-family: var(--font-display);
