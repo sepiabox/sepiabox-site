@@ -66,13 +66,15 @@ for (const { path, lang, heading, notice } of pages) {
 
 test("the language switch goes from English to pt-BR and back", async ({ page }) => {
   await page.goto("/");
-  const toPortuguese = page.getByRole("navigation", { name: "Language" }).getByRole("link", { name: "PT-BR" });
+  const toPortuguese = page.getByRole("navigation", { name: "Language" }).getByRole("link", { name: "Português (Brasil)" });
+  await expect(page.getByRole("navigation", { name: "Language" }).getByRole("link", { name: "English" })).toHaveAttribute("aria-current", "page");
   await expect(toPortuguese).toHaveAttribute("hreflang", "pt-BR");
   await toPortuguese.click();
   await expect(page).toHaveURL(/\/pt-br\/$/);
   await expect(page.locator("html")).toHaveAttribute("lang", "pt-BR");
 
-  const toEnglish = page.getByRole("navigation", { name: "Idioma" }).getByRole("link", { name: "EN" });
+  await expect(page.getByRole("navigation", { name: "Idioma" }).getByRole("link", { name: "Português (Brasil)" })).toHaveAttribute("aria-current", "page");
+  const toEnglish = page.getByRole("navigation", { name: "Idioma" }).getByRole("link", { name: "English" });
   await expect(toEnglish).toHaveAttribute("hreflang", "en");
   await toEnglish.click();
   await expect(page).toHaveURL(/127\.0\.0\.1:4173\/$/);

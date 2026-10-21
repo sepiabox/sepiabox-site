@@ -6,7 +6,7 @@ It is a static site published with GitHub Pages. The app itself lives at `app.se
 
 ## Status
 
-A single static page in Portuguese (`index.html`, `styles.css`), desktop first, that still reads well on a phone. Pushes to `main` deploy it to GitHub Pages; `CNAME` points it at `sepiabox.com`.
+Two static pages with the same content, desktop first, that still read well on a phone: `index.html` in English and `pt-br/index.html` in Brazilian Portuguese, linked by a language switch and `hreflang`. Both share `styles.css` and `assets/`. Pushes to `main` deploy them to GitHub Pages (the workflow publishes `index.html`, `styles.css`, `assets/`, `pt-br/` and `CNAME`); `CNAME` points the site at `sepiabox.com`.
 
 Before it is live, a person has to:
 
