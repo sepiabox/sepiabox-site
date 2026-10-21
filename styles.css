@@ -276,6 +276,12 @@ h3 {
 }
 
 /* Stand-in photos in sepia tones, as in the site design. */
+.ask-note {
+  margin: 12px 0 0;
+  color: var(--text-secondary);
+  font-size: 0.8125rem;
+}
+
 .ask-thumbs li {
   aspect-ratio: 1;
   border-radius: 6px;
@@ -345,8 +351,37 @@ section {
   color: var(--text-secondary);
 }
 
-.sources .soon span::before {
+/* Inside a source chip the label is plain text after a dot; elsewhere it is a small dashed chip of its own. */
+.sources .soon .soon-label {
+  display: inline;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+.sources .soon .soon-label::before {
   content: "· ";
+}
+
+.soon-label {
+  display: inline-block;
+  padding: 1px 8px;
+  border: 1px dashed #8c8075;
+  border-radius: 999px;
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.privacy .soon-label {
+  border-color: #b7aca0;
+  color: #b7aca0;
 }
 
 .steps {

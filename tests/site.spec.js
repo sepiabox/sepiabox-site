@@ -2,11 +2,25 @@
 const { test, expect } = require("@playwright/test");
 
 const pages = [
-  { path: "/", lang: "en", heading: "Ask your photos.", notice: "The Sepiabox name and logo: all rights reserved." },
-  { path: "/pt-br/", lang: "pt-BR", heading: "Pergunte às suas fotos.", notice: "Nome e logo Sepiabox: todos os direitos reservados." },
+  {
+    path: "/",
+    lang: "en",
+    heading: "Ask your photos.",
+    notice: "The Sepiabox name and logo: all rights reserved.",
+    soon: "coming soon",
+    note: "Illustrative example",
+  },
+  {
+    path: "/pt-br/",
+    lang: "pt-BR",
+    heading: "Pergunte às suas fotos.",
+    notice: "Nome e logo Sepiabox: todos os direitos reservados.",
+    soon: "em breve",
+    note: "Exemplo ilustrativo",
+  },
 ];
 
-for (const { path, lang, heading, notice } of pages) {
+for (const { path, lang, heading, notice, soon, note } of pages) {
   test.describe(`${lang} page`, () => {
     test("has the sections the navigation links to", async ({ page }) => {
       await page.goto(path);
@@ -31,6 +45,24 @@ for (const { path, lang, heading, notice } of pages) {
       await expect(page.getByRole("heading", { level: 1 })).toHaveText(heading);
       await expect(page.locator("footer")).toContainText("© 2026 Sepiabox");
       await expect(page.locator("footer")).toContainText(notice);
+    });
+
+    test("labels every feature that is not built yet as coming soon", async ({ page }) => {
+      await page.goto(path);
+      const items = page.locator(".soon");
+      // Three cloud sources and phones, the people question and export.
+      await expect(items).toHaveCount(6);
+      for (const item of await items.all()) {
+        await expect(item.locator(".soon-label")).toHaveText(soon);
+      }
+      // No stray label outside a marked item.
+      await expect(page.locator(".soon-label")).toHaveCount(6);
+      await expect(page.locator(".sources li:not(.soon)")).toHaveCount(1);
+    });
+
+    test("marks the hero answer as an illustrative example", async ({ page }) => {
+      await page.goto(path);
+      await expect(page.locator(".ask-card .ask-note")).toHaveText(note);
     });
 
     test("loads its stylesheet and images", async ({ page }) => {
