@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sepiabox — Pergunte às suas fotos</title>
-  <meta name="description" content="O Sepiabox junta as fotos e vídeos da família num só lugar e encontra qualquer momento quando se faz uma pergunta.">
+  <title>Sepiabox — Ask your photos</title>
+  <meta name="description" content="Sepiabox brings your family's photos and videos together in one place and finds any moment when you ask a question.">
+  <link rel="alternate" hreflang="en" href="https://sepiabox.com/">
+  <link rel="alternate" hreflang="pt-BR" href="https://sepiabox.com/pt-br/">
+  <link rel="alternate" hreflang="x-default" href="https://sepiabox.com/">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,17 +17,25 @@
 <body>
   <header class="site-header">
     <div class="wrap header-inner">
-      <a class="brand" href="#topo" aria-label="Sepiabox, início">
+      <a class="brand" href="#topo" aria-label="Sepiabox, home">
         <img src="assets/symbol.svg" alt="" width="40" height="40">
         <span class="wordmark"><span class="wordmark-sepia">sepia</span>box</span>
       </a>
-      <nav aria-label="Secções">
-        <ul class="nav-list">
-          <li><a href="#como">Como funciona</a></li>
-          <li><a href="#perguntas">Perguntas</a></li>
-          <li><a href="#privacidade">Privacidade</a></li>
-        </ul>
-      </nav>
+      <div class="header-end">
+        <nav aria-label="Sections">
+          <ul class="nav-list">
+            <li><a href="#como">How it works</a></li>
+            <li><a href="#perguntas">Questions</a></li>
+            <li><a href="#privacidade">Privacy</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Language">
+          <ul class="lang-switch">
+            <li><a href="./" hreflang="en" lang="en" aria-current="page">EN</a></li>
+            <li><a href="pt-br/" hreflang="pt-BR" lang="pt-BR">PT-BR</a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
   </header>
 
@@ -32,14 +43,14 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="wrap hero-inner">
         <div class="hero-copy">
-          <h1 id="hero-title">Pergunte às suas fotos.</h1>
-          <p class="lead">O Sepiabox junta as fotos e vídeos da família num só lugar, entende cada um uma única vez e encontra qualquer momento quando faz uma pergunta.</p>
+          <h1 id="hero-title">Ask your photos.</h1>
+          <p class="lead">Sepiabox brings your family's photos and videos together in one place, understands each one just once, and finds any moment when you ask a question.</p>
         </div>
         <figure class="ask-card">
-          <figcaption class="visually-hidden">Exemplo de pergunta e resposta</figcaption>
-          <p class="ask-question">Quantos casamentos fomos em 2026?</p>
-          <p class="ask-filter"><code>ocasião = casamento · ano = 2026</code></p>
-          <p class="ask-answer"><strong>4</strong> casamentos este ano</p>
+          <figcaption class="visually-hidden">An example question and answer</figcaption>
+          <p class="ask-question">How many weddings did we go to in 2026?</p>
+          <p class="ask-filter"><code>occasion = wedding · year = 2026</code></p>
+          <p class="ask-answer"><strong>4</strong> weddings this year</p>
           <ul class="ask-thumbs" aria-hidden="true">
             <li></li><li></li><li></li><li></li>
           </ul>
@@ -49,33 +60,33 @@
 
     <section id="fontes" class="band" aria-labelledby="fontes-title">
       <div class="wrap">
-        <h2 id="fontes-title">Junta o que hoje está espalhado</h2>
-        <p>A mesma foto guardada em três sítios passa a ser uma só.</p>
+        <h2 id="fontes-title">Brings together what is scattered today</h2>
+        <p>The same photo kept in three places becomes just one.</p>
         <ul class="sources">
-          <li>HD externo</li>
-          <li>Google Fotos</li>
+          <li>External drive</li>
+          <li>Google Photos</li>
           <li>Google Drive</li>
           <li>OneDrive</li>
-          <li class="soon">iPhone e Android <span>em breve</span></li>
+          <li class="soon">iPhone and Android <span>coming soon</span></li>
         </ul>
       </div>
     </section>
 
     <section id="como" aria-labelledby="como-title">
       <div class="wrap">
-        <h2 id="como-title">Como funciona</h2>
+        <h2 id="como-title">How it works</h2>
         <ol class="steps">
           <li>
-            <h3>Junte</h3>
-            <p>Importe um HD externo ou ligue as suas contas na nuvem. Os duplicados ficam de fora.</p>
+            <h3>Gather</h3>
+            <p>Import an external drive or connect your cloud accounts. Duplicates are left out.</p>
           </li>
           <li>
-            <h3>Entenda</h3>
-            <p>À chegada, cada foto recebe data, lugar, pessoas e ocasião. Só precisa de dar nome às pessoas.</p>
+            <h3>Understand</h3>
+            <p>On arrival, each photo gets a date, a place, people and an occasion. You only name the people.</p>
           </li>
           <li>
-            <h3>Pergunte</h3>
-            <p>As perguntas viram filtros sobre esses dados, por isso a resposta é imediata e as fotos nunca são relidas.</p>
+            <h3>Ask</h3>
+            <p>Questions become filters over that data, so the answer is instant and the photos are never read again.</p>
           </li>
         </ol>
       </div>
@@ -83,26 +94,25 @@
 
     <section id="perguntas" class="band" aria-labelledby="perguntas-title">
       <div class="wrap">
-        <h2 id="perguntas-title">Perguntas que o Sepiabox responde</h2>
+        <h2 id="perguntas-title">Questions Sepiabox answers</h2>
         <ul class="questions">
-          <li>“Fotos minhas com a Ana e o Pedro juntos”</li>
-          <li>“Fotos de Lisboa em dezembro”</li>
-          <li>“O que fazia neste dia há cinco anos?”</li>
-          <li>“Fotos na neve”</li>
-          <li>“Em que ocasiões usei este vestido vermelho?”</li>
-          <li>“Quantas fotos do HD já estavam no Google Drive?”</li>
+          <li>“Photos of me with Ana and Pedro together”</li>
+          <li>“Photos of Lisbon in December”</li>
+          <li>“What was I doing on this day five years ago?”</li>
+          <li>“Photos in the snow”</li>
+          <li>“When did I wear this red dress?”</li>
+          <li>“How many photos from the drive were already in Google Drive?”</li>
         </ul>
       </div>
     </section>
 
     <section id="privacidade" class="privacy" aria-labelledby="privacidade-title">
       <div class="wrap">
-        <h2 id="privacidade-title">As suas fotos continuam suas</h2>
+        <h2 id="privacidade-title">Your photos stay yours</h2>
         <ul class="privacy-list">
-          <li><strong>Fotos suas.</strong> Exporta tudo, originais e dados, quando quiser.</li>
-          <li><strong>Rostos só se ligar.</strong> O reconhecimento facial é opcional e pode ser apagado.</li>
-          <li><strong>Guardadas na Europa.</strong> Os originais ficam num centro de dados em França.</li>
-          <li><strong>Código aberto.</strong> Qualquer pessoa pode ver como funciona.</li>
+          <li><strong>Your photos are yours.</strong> Export everything, originals and data, whenever you like.</li>
+          <li><strong>Faces only if you turn them on.</strong> Face recognition is optional and can be deleted.</li>
+          <li><strong>Stored in Europe.</strong> The originals are kept in a data center in France.</li>
         </ul>
       </div>
     </section>
@@ -110,8 +120,8 @@
 
   <footer class="site-footer">
     <div class="wrap footer-inner">
-      <p class="footer-brand"><img src="assets/symbol-small-light.svg" alt="" width="28" height="28"> Nome e logótipo Sepiabox: todos os direitos reservados.</p>
-      <p>Código no <a href="https://github.com/sepiabox">GitHub</a>.</p>
+      <p class="footer-brand"><img src="assets/symbol-small-light.svg" alt="" width="28" height="28"> © 2026 Sepiabox</p>
+      <p>The Sepiabox name and logo: all rights reserved.</p>
     </div>
   </footer>
 </body>

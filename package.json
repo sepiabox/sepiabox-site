@@ -3,7 +3,7 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "lint": "html-validate index.html",
+    "lint": "html-validate index.html pt-br/index.html",
     "test": "playwright test",
     "serve": "http-server . -p 4173 -s"
   },
